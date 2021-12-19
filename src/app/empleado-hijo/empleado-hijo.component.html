@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div >{{i+1}} . <a [routerLink]="['actualizar',i]">{{empleado.nombre}} {{empleado.apellido}} </a>{{empleado.cargo}}
+          {{empleado.salario}} </div>
+      </div>
+    </div>
+    <app-caracteristicas-empleado (caracteristicasEmpleados)="agregarCaracteristica($event)"></app-caracteristicas-empleado>
+  
+    <ul>
+      <li *ngFor="let caracteristica of arrayCaracteristicas">{{caracteristica}}</li>
+    </ul>
+  </div>
